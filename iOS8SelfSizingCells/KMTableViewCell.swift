@@ -26,7 +26,6 @@ class KMTableViewCell: UITableViewCell {
     func updateFonts()
     {
         titleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
-        titleLabel.l
     }
     
 }

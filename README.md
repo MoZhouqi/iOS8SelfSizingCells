@@ -19,7 +19,7 @@ All features described above is to facilitate and enhance the use of Auto Layout
 <img src="https://raw.githubusercontent.com/MoZhouqi/iOS8SelfSizingCells/master/Screenshots/Issue.png" width="355"/>
 <img src="https://raw.githubusercontent.com/MoZhouqi/iOS8SelfSizingCells/master/Screenshots/Workaround.png" width="355"/>
 
-Unfortunately, they don't seem to be working perfectly when uses the features introduced above. There is no multiline labels!
+Unfortunately, they don't seem to be working perfectly when uses the features introduced above. There are no multiline labels!
 
 But Scrolling the table down and back to reuse the cells or rotate the screen to landscape and then rotate back to portrait causes them to be redisplayed correctly.
 
