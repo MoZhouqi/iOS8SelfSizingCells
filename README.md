@@ -37,11 +37,13 @@ class KMTableViewCell: UITableViewCell {
     @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
     
     var maxLayoutWidth: CGFloat {
-        let DetailAccessoryWidth: CGFloat = 47.0
+        
+        // So weird! the value is 47.0 in IB, but it is actually 48.0.
+        let CellTrailingToContentViewTrailingConstant: CGFloat = 48.0
         let maxWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow!.frame)
         
         // Minus the left/right padding for the label
-        let maxLayoutWidth = maxWidth - leadingConstraint.constant - trailingConstraint.constant - DetailAccessoryWidth
+        let maxLayoutWidth = maxWidth - leadingConstraint.constant - trailingConstraint.constant - CellTrailingToContentViewTrailingConstant
         return maxLayoutWidth
     }
     
