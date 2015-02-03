@@ -37,7 +37,7 @@ class KMWorkAroundTableViewCell: KMTableViewCell {
     
     var maxLayoutWidth: CGFloat {
         
-        // So weird! the value is 47.0 in IB, but it is actually 48.0.
+        // So weird! The value is 47.0 in IB, but it is actually 48.0.
         let CellTrailingToContentViewTrailingConstant: CGFloat = 48.0
         let maxWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow!.frame)
         

@@ -13,7 +13,7 @@ Apple added support for automatically computing `preferredMaxLayoutWidth` of UIL
 
 And also in iOS 8, Apple introduced a new feature for UITableView known as `Self Sizing Cells` which provides a solution for displaying dynamic content and calculating the height of each cell at runtime.
 
-All features described above is to facilitate and enhance the use of Auto Layout.
+All features described above is intended to facilitate and enhance the use of Auto Layout.
 
 ##Issue
 <img src="https://raw.githubusercontent.com/MoZhouqi/iOS8SelfSizingCells/master/Screenshots/Issue.png" width="355"/>
@@ -38,7 +38,7 @@ class KMTableViewCell: UITableViewCell {
     
     var maxLayoutWidth: CGFloat {
         
-        // So weird! the value is 47.0 in IB, but it is actually 48.0.
+        // So weird! The value is 47.0 in IB, but it is actually 48.0.
         let CellTrailingToContentViewTrailingConstant: CGFloat = 48.0
         let maxWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow!.frame)
         
