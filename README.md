@@ -16,7 +16,7 @@ And also in iOS 8, Apple introduced a new feature for UITableView known as `Self
 All features described above is intended to facilitate and enhance the use of Auto Layout.
 
 ##Issue
-![Screenshot](https://raw.githubusercontent.com/MoZhouqi/iOS8SelfSizingCells/master/Gif/screenshot.gif)
+![Screenshot](https://raw.githubusercontent.com/MoZhouqi/iOS8SelfSizingCells/master/Gif/Screenshot.gif)
 
 Unfortunately, they don't seem to be working perfectly when uses the features introduced above. There are no multiline labels!
 
