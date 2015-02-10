@@ -8,19 +8,20 @@
 
 import UIKit
 
-
-enum KMTableViewCellStyle: String {
-    case Issue = "Issue Cell"
-    case Workaround = "Workaround Cell"
-}
-
 class KMTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        updateFonts()
+    var tableView: UIView!
+    var maxLayoutWidth: CGFloat {
+        // So weird! The value is 47.0 in IB, but it is actually 48.0.
+        let CellTrailingToContentViewTrailingConstant: CGFloat = 48.0
+        
+        // Minus the left/right padding for the label
+        let maxLayoutWidth = CGRectGetWidth(tableView.frame) - leadingConstraint.constant - trailingConstraint.constant - CellTrailingToContentViewTrailingConstant
+        return maxLayoutWidth
     }
     
     func updateFonts()
@@ -28,32 +29,11 @@ class KMTableViewCell: UITableViewCell {
         titleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
     }
     
-}
-
-class KMWorkAroundTableViewCell: KMTableViewCell {
-    
-    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
-    
-    var maxLayoutWidth: CGFloat {
-        
-        // So weird! The value is 47.0 in IB, but it is actually 48.0.
-        let CellTrailingToContentViewTrailingConstant: CGFloat = 48.0
-        let maxWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow!.frame)
-        
-        // Minus the left/right padding for the label
-        let maxLayoutWidth = maxWidth - leadingConstraint.constant - trailingConstraint.constant - CellTrailingToContentViewTrailingConstant
-        return maxLayoutWidth
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        titleLabel.preferredMaxLayoutWidth = maxLayoutWidth
-    }
-    
     override func layoutSubviews() {
         super.layoutSubviews()
-        titleLabel.preferredMaxLayoutWidth = maxLayoutWidth
+        if tableView != nil {
+            titleLabel.preferredMaxLayoutWidth = maxLayoutWidth
+        }
     }
     
 }

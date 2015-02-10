@@ -16,46 +16,48 @@ And also in iOS 8, Apple introduced a new feature for UITableView known as `Self
 All features described above is intended to facilitate and enhance the use of Auto Layout.
 
 ##Issue
-<img src="https://raw.githubusercontent.com/MoZhouqi/iOS8SelfSizingCells/master/Screenshots/Issue.png" width="355"/>
-<img src="https://raw.githubusercontent.com/MoZhouqi/iOS8SelfSizingCells/master/Screenshots/Workaround.png" width="355"/>
+![Screenshot](https://raw.githubusercontent.com/MoZhouqi/iOS8SelfSizingCells/master/Gif/screenshot.gif)
 
 Unfortunately, they don't seem to be working perfectly when uses the features introduced above. There are no multiline labels!
 
-But Scrolling the table down and back to reuse the cells or rotate the screen to landscape and then rotate back to portrait causes them to be redisplayed correctly.
+But scrolling the tableView down and back to reuse the cells or change the tableView's size to re-layout the subViews causes them to be redisplayed correctly.
 
 The cause of the problem is the `preferredMaxLayoutWidth` property of the UILabel is not automatically calculated correctly. 
 
-
 ##WorkAround
-The workaround is to manually set the `preferredMaxLayoutWidth` on the label based on its actual width. See `KMTableViewCell.swift`
+The workaround is to manually set the `preferredMaxLayoutWidth` on the label based on its actual width. See `KMTableViewCell.swift` and `DetailViewController.swift`
 ```
 class KMTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
     
+    var tableView: UIView!
     var maxLayoutWidth: CGFloat {
-        
         // So weird! The value is 47.0 in IB, but it is actually 48.0.
         let CellTrailingToContentViewTrailingConstant: CGFloat = 48.0
-        let maxWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow!.frame)
         
         // Minus the left/right padding for the label
-        let maxLayoutWidth = maxWidth - leadingConstraint.constant - trailingConstraint.constant - CellTrailingToContentViewTrailingConstant
+        let maxLayoutWidth = CGRectGetWidth(tableView.frame) - leadingConstraint.constant - trailingConstraint.constant - CellTrailingToContentViewTrailingConstant
         return maxLayoutWidth
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        titleLabel.preferredMaxLayoutWidth = maxLayoutWidth
-    }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
         titleLabel.preferredMaxLayoutWidth = maxLayoutWidth
     }
-    
+}
+  
+class DetailViewController: UITableViewController {
+    ......  
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(Constants.TableViewCell.identifier, forIndexPath: indexPath) as KMTableViewCell
+        cell.tableView = self.tableView
+        cell.titleLabel.preferredMaxLayoutWidth = cell.maxLayoutWidth
+        ......
+        return cell
+    }
+    ......
 }
 ```

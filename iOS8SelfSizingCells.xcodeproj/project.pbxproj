@@ -12,9 +12,11 @@
 		CD21A2591A78B90800E5966C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD21A2581A78B90800E5966C /* Images.xcassets */; };
 		CD21A25C1A78B90800E5966C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD21A25A1A78B90800E5966C /* LaunchScreen.xib */; };
 		CD21A2681A78B90800E5966C /* iOS8SelfSizingCellsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21A2671A78B90800E5966C /* iOS8SelfSizingCellsTests.swift */; };
-		CD21A2731A78B93500E5966C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21A2711A78B93500E5966C /* RootViewController.swift */; };
-		CD21A2741A78B93500E5966C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21A2721A78B93500E5966C /* TableViewController.swift */; };
+		CD21A2731A78B93500E5966C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21A2711A78B93500E5966C /* MasterViewController.swift */; };
+		CD21A2741A78B93500E5966C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21A2721A78B93500E5966C /* DetailViewController.swift */; };
 		CD21A2761A78BA1200E5966C /* KMTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21A2751A78BA1200E5966C /* KMTableViewCell.swift */; };
+		CD5722BB1A88741700EF85F9 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5722BA1A88741700EF85F9 /* SplitViewController.swift */; };
+		CD5722BD1A8879D000EF85F9 /* TraitOverrideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5722BC1A8879D000EF85F9 /* TraitOverrideViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +39,11 @@
 		CD21A2611A78B90800E5966C /* iOS8SelfSizingCellsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS8SelfSizingCellsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD21A2661A78B90800E5966C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD21A2671A78B90800E5966C /* iOS8SelfSizingCellsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS8SelfSizingCellsTests.swift; sourceTree = "<group>"; };
-		CD21A2711A78B93500E5966C /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		CD21A2721A78B93500E5966C /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		CD21A2711A78B93500E5966C /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		CD21A2721A78B93500E5966C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CD21A2751A78BA1200E5966C /* KMTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMTableViewCell.swift; sourceTree = "<group>"; };
+		CD5722BA1A88741700EF85F9 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
+		CD5722BC1A8879D000EF85F9 /* TraitOverrideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraitOverrideViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +85,10 @@
 		CD21A24E1A78B90700E5966C /* iOS8SelfSizingCells */ = {
 			isa = PBXGroup;
 			children = (
-				CD21A2711A78B93500E5966C /* RootViewController.swift */,
-				CD21A2721A78B93500E5966C /* TableViewController.swift */,
+				CD5722BC1A8879D000EF85F9 /* TraitOverrideViewController.swift */,
+				CD5722BA1A88741700EF85F9 /* SplitViewController.swift */,
+				CD21A2711A78B93500E5966C /* MasterViewController.swift */,
+				CD21A2721A78B93500E5966C /* DetailViewController.swift */,
 				CD21A2751A78BA1200E5966C /* KMTableViewCell.swift */,
 				CD21A2551A78B90700E5966C /* Main.storyboard */,
 				CD21A24F1A78B90700E5966C /* Supporting Files */,
@@ -218,9 +224,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD5722BB1A88741700EF85F9 /* SplitViewController.swift in Sources */,
+				CD5722BD1A8879D000EF85F9 /* TraitOverrideViewController.swift in Sources */,
 				CD21A2521A78B90700E5966C /* AppDelegate.swift in Sources */,
-				CD21A2731A78B93500E5966C /* RootViewController.swift in Sources */,
-				CD21A2741A78B93500E5966C /* TableViewController.swift in Sources */,
+				CD21A2731A78B93500E5966C /* MasterViewController.swift in Sources */,
+				CD21A2741A78B93500E5966C /* DetailViewController.swift in Sources */,
 				CD21A2761A78BA1200E5966C /* KMTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +355,7 @@
 				INFOPLIST_FILE = iOS8SelfSizingCells/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -357,6 +366,7 @@
 				INFOPLIST_FILE = iOS8SelfSizingCells/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -413,6 +423,7 @@
 				CD21A26D1A78B90800E5966C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD21A26E1A78B90800E5966C /* Build configuration list for PBXNativeTarget "iOS8SelfSizingCellsTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +432,7 @@
 				CD21A2701A78B90800E5966C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
