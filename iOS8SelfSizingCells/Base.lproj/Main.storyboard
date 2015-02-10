@@ -111,8 +111,8 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FrY-2I-7OM" id="Lhe-07-7Wq">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="415" placeholderIntrinsicHeight="27.5" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ese-3G-jVg">
-                                            <rect key="frame" x="50" y="8" width="483" height="28"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ese-3G-jVg">
+                                            <rect key="frame" x="50" y="8" width="483" height="27"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -120,8 +120,8 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Ese-3G-jVg" firstAttribute="top" secondItem="Lhe-07-7Wq" secondAttribute="topMargin" id="Alt-Pb-LE4"/>
-                                        <constraint firstItem="Ese-3G-jVg" firstAttribute="leading" secondItem="Lhe-07-7Wq" secondAttribute="leading" constant="50" id="FFl-Vx-SIE"/>
-                                        <constraint firstAttribute="trailing" secondItem="Ese-3G-jVg" secondAttribute="trailing" constant="20" id="RbU-cd-ojS"/>
+                                        <constraint firstItem="Ese-3G-jVg" firstAttribute="leading" secondItem="Lhe-07-7Wq" secondAttribute="leading" priority="999" constant="50" id="FFl-Vx-SIE"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ese-3G-jVg" secondAttribute="trailing" priority="999" constant="20" id="RbU-cd-ojS"/>
                                         <constraint firstItem="Ese-3G-jVg" firstAttribute="bottom" secondItem="Lhe-07-7Wq" secondAttribute="bottomMargin" id="ZXW-oN-OoZ"/>
                                     </constraints>
                                 </tableViewCellContentView>

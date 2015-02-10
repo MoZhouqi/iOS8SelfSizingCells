@@ -13,7 +13,7 @@ Apple added support for automatically computing `preferredMaxLayoutWidth` of UIL
 
 And also in iOS 8, Apple introduced a new feature for UITableView known as `Self Sizing Cells` which provides a solution for displaying dynamic content and calculating the height of each cell at runtime.
 
-All features described above is intended to facilitate and enhance the use of Auto Layout.
+All features described above is intended to facilitate and improve the use of Auto Layout.
 
 ##Issue
 ![Screenshot](https://raw.githubusercontent.com/MoZhouqi/iOS8SelfSizingCells/master/Gif/Screenshot.gif)
